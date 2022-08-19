@@ -6,7 +6,7 @@ const initState = {
     token:sessionStorage.getItem("token") || "",
 }
 
- export  const authReduce  = (state=initState,{type,payload})=>{
+ export  const authReducer  = (state=initState,{type,payload})=>{
     switch (type) {
         case authActions.LOADING:{
             return{
