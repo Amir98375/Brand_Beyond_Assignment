@@ -1,11 +1,11 @@
 const express = require("express")
 require("dotenv").config()
 //const mongoose = require('mongoose')
-const connect = require("./configs/db")
-const userController= require("./controller/user.controller")
-const User = require("./models/user.model")
-const {register,login,loggedUser,finduser} = require("./controller/auth.controller")
-const authenticate=require("./middleware/authenticate.js")
+const connect = require("./src/configs/db")
+const userController= require("./src/controller/user.controller")
+const User = require("./src/models/user.model")
+const {register,login,loggedUser,finduser} = require("./src/controller/auth.controller")
+const authenticate=require("./src/middleware/authenticate")
 
 
 const app = express();
