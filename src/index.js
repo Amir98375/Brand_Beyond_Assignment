@@ -17,7 +17,7 @@ app.get("/allUsers",finduser)
 app.get("/loggedUser",authenticate,loggedUser)
 // app.use("/products",productController)
 
-app.listen(5000,async()=>{
+app.listen(PROCESS.env.PORT||5000,async()=>{
    try {
     await connect()
     console.log("listening on port 5000")
