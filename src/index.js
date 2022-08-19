@@ -1,4 +1,5 @@
 const express = require("express")
+require("dotenv").config()
 //const mongoose = require('mongoose')
 const connect = require("./configs/db")
 const userController= require("./controller/user.controller")
@@ -17,7 +18,7 @@ app.get("/allUsers",finduser)
 app.get("/loggedUser",authenticate,loggedUser)
 // app.use("/products",productController)
 
-app.listen(PROCESS.env.PORT||5000,async()=>{
+app.listen(5000,async()=>{
    try {
     await connect()
     console.log("listening on port 5000")
