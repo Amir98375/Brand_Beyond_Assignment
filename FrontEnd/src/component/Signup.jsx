@@ -10,9 +10,7 @@ export const Signup = () => {
 const [password,setPassword] = useState('')
 const [role,setRole] = useState('')
 const data=useSelector((state)=>state.user)
-// const {useremail} = useSelector((store)=>store.user);
 
-// const userrole= useSelector((store)=>store.user.role)
 const {isAuthenticate,token} = useSelector((store)=>store.login)
 const dispatch = useDispatch((store)=>store.login);
 const navigate = useNavigate()
