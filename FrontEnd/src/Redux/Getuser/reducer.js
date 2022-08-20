@@ -1,19 +1,19 @@
 const initState = 
 {
-    username: sessionStorage.getItem("loggedUserName") ||"",
+    role: sessionStorage.getItem("loggedUserRole") ||"",
     email: sessionStorage.getItem("loggedUserEmail") || ""
 }
 
  export  const userReducer  = (state=initState,{type,payload})=>{
     switch (type) {
         case "SUCCESS":{
-            console.log(payload,"rducer-user")
-            sessionStorage.setItem("loggedUserName",payload.username)
+            // console.log(payload.role[0],"reducer-user get user")
+            sessionStorage.setItem("loggedUserRole",payload.role[0])
             
             sessionStorage.setItem("loggedUserEmail",payload.email)
             return{
                 ...state,
-                username:payload.username,
+                userrole:payload.role,
                 email:payload.email
             }
         }

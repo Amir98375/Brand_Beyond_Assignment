@@ -22,7 +22,7 @@ export const signupFailure=()=>({
 export const registerUser=(payload)=>(dispatch)=>{
     
     dispatch(signupLoading());
-    console.log('signupdataa',payload);
+    console.log('signupdataaconsole',payload);
     axios.post("http://localhost:5000/register",payload)
     .then((res)=>{
         dispatch(signupSuccess());

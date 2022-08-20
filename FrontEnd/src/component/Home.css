@@ -21,8 +21,17 @@
     justify-content: space-around;
    padding-top: 10px;
 }
+.admincontainer{
+  
+    height: 40px;
+    width: 100%;
+    background-color: black;
+    font-size: large;
+   
+}
 p{
     color: white;
+    
 }
 
 .image{

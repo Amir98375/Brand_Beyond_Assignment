@@ -5,16 +5,16 @@ export const userSuccess=(payload)=>({
     payload
 })
 
-export const getUser=(token,dispatch)=>{
+export const getUser=(token)=>(dispatch)=>{
     // console.log(token)
-    axios.get(`https://amir-project.herokuapp.com/api/user/loggeduser`,{
+    axios.get(`http://localhost:5000/loggeduser`,{
         headers:{
             "Authorization" : `Bearer ${token}`
         }
     })
     .then((res)=>{
         // console.log('getuse details',res.data.user);
-        dispatch(userSuccess({username:res.data.user.name,email:res.data.user.email}))
+        dispatch(userSuccess({role:res.data.user.role,email:res.data.user.email}))
     })
     .catch((err)=> console.log(err));
 }
