@@ -25,10 +25,12 @@ export const logout=()=>({
 export const login=(payload)=>(dispatch)=>{
     dispatch(loginLoading());
 
-    // console.log(payload,'from payload action');
-    axios.post(`https://amir-project.herokuapp.com/api/user/login`,payload)
+    console.log(payload,'from payload action');
+    
+    axios.post(`http://localhost:5000/login`,payload)
     .then((res)=>{
-        // console.log(res,"action")
+        console.log(res,"action")
+        alert("signin")
         dispatch(loginSuccess({token:res.data.token}))
     })
     .catch((err)=> dispatch(loginFailure()))

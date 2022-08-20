@@ -29,11 +29,13 @@ const login = async(req,res)=>{
         const user=  await User.findOne({email:req.body.email})
         //cehcked if mail exist or not
         if(!user){
+            console.log("not exist")
             return res.status(400).send("wrong email or password ")
         }
        //check password is correct or not
        const match = user.checkedpassword(req.body.password)
        if(!match){
+        console.log("wrong password exist")
            return res.status(400).send("wrong password or email")
        }
        const token = newToken(user)

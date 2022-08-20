@@ -4,6 +4,20 @@
   
   
 }
+.navbar{
+    height: 70px;
+    width: 100%;
+    background-color:black;
+    border: 1px solid grey;
+   
+}
+.navbarclass{
+    display: flex;
+    list-style: none;
+    color: white;
+    justify-content: space-around;
+    font-size: larger;
+}
 body{
     background-color: #313342;
 }
@@ -16,6 +30,7 @@ body{
     border-right: none;
    border-top: 1px solid grey;
    border-bottom: 1px solid grey;
+   color: white;
   
 }
 

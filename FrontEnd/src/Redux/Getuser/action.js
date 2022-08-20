@@ -14,7 +14,7 @@ export const getUser=(token,dispatch)=>{
     })
     .then((res)=>{
         // console.log('getuse details',res.data.user);
-        dispatch(userSuccess({email:res.data.user.email}))
+        dispatch(userSuccess({username:res.data.user.name,email:res.data.user.email}))
     })
     .catch((err)=> console.log(err));
 }

@@ -16,6 +16,7 @@ body{
     border-right: none;
    border-top: 1px solid grey;
    border-bottom: 1px solid grey;
+   color: white;
   
 }
 .inputpass{
@@ -49,4 +50,5 @@ body{
 }
 .blue{
     color: blueviolet;
+    cursor: pointer;
 }

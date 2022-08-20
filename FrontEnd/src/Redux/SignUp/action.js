@@ -1,5 +1,6 @@
 import axios from "axios"
-import { Navigate } from "react-router"
+
+
 
 export const authActions={
     LOADING:"SIGNUP_LOADING",
@@ -19,15 +20,19 @@ export const signupFailure=()=>({
 })
 
 export const registerUser=(payload)=>(dispatch)=>{
+    
     dispatch(signupLoading());
-    console.log('signup',payload);
-    axios.post("https://amir-project.herokuapp.com/api/user/register",payload)
+    console.log('signupdataa',payload);
+    axios.post("http://localhost:5000/register",payload)
     .then((res)=>{
         dispatch(signupSuccess());
+        alert("signup")
+      
         console.log('ok');
     })
     .catch((err)=>{
         console.log('sighn err',err);
         dispatch(signupFailure());
+        alert("wrong credentials")
     })
 }

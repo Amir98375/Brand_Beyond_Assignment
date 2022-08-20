@@ -6,7 +6,7 @@ const initState = {
     token:sessionStorage.getItem("token") || "",
 }
 
- export  const authReducer  = (state=initState,{type,payload})=>{
+ export  const authReduce  = (state=initState,{type,payload})=>{
     switch (type) {
         case authActions.LOADING:{
             return{
@@ -45,7 +45,7 @@ const initState = {
             console.log('logout,reduccer');
             sessionStorage.removeItem("isAuthenticate");
             sessionStorage.setItem("token","");
-            sessionStorage.removeItem("loggedUserName");
+          
             sessionStorage.removeItem("loggedUserEmail");
 
             return {
