@@ -17,7 +17,7 @@ const {isAuthenticate,token} = useSelector((store)=>store.login)
             <ul className='navbarclass'>
                 <li>home</li>
                 <li>Admin Pannel</li>
-                <li>{isAuthenticate? detail:"login"}</li>
+                <li>{isAuthenticate? detail:"user"}</li>
               
             </ul>
         </nav>
